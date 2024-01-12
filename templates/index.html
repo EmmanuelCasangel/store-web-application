@@ -35,6 +35,7 @@
                             <td>{{.Description}}</td>
                             <td>{{.Price}}</td>
                             <td>{{.Quantity}}</td>
+                            <td><a href="/delete?id={{.Id}}" class="btn btn-danger">Deletar</a></td>
                         </tr>
                         {{end}}
                     </tbody>
@@ -48,6 +49,5 @@
 
     </div>
 </body>
-
 </html>
 {{end}}
