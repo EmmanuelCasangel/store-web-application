@@ -2,7 +2,6 @@ package models
 
 import (
 	"emmanuel/store-web-application/db"
-	"log"
 
 	"github.com/google/uuid"
 )
@@ -59,8 +58,6 @@ func CreateProduct(name, descripiton string, price float64, quantity int) {
 	}
 
 	id := uuid.NewString()
-
-	log.Println("id", id, "nome", name, "des", descripiton, "pr", price, "quantity", quantity)
 
 	insertData.Exec(id, name, descripiton, price, quantity)
 	defer db.Close()
